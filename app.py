@@ -119,4 +119,3 @@ def say_hello():
 def test():
     return jsonify({'message': 'Test erfolgreich'})
 
-import numpy as np
