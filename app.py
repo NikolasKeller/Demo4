@@ -282,7 +282,7 @@ def process_pdf():
     try:
         # Speichern der hochgeladenen Datei
         upload_folder = '/tmp/uploads' if os.environ.get('VERCEL_ENV') else 'uploads'
-        os.makedirs(upload_folder, exist_okay=True)
+        os.makedirs(upload_folder, exist_ok=True)
         file_path = os.path.join(upload_folder, file.filename)
         logger.debug(f"Speichere Datei unter: {file_path}")
         file.save(file_path)
