@@ -110,6 +110,10 @@ def ask_anthropic():
 @app.route('/say_hello', methods=['GET'])
 def say_hello():
     return jsonify({'text': 'hello world'}), 200
+
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({'message': 'Test erfolgreich'})
     
 
 if __name__ == '__main__':
