@@ -116,5 +116,3 @@ def test():
     return jsonify({'message': 'Test erfolgreich'})
     
 
-if __name__ == '__main__':
-    app.run(debug=True)
