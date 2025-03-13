@@ -316,6 +316,12 @@ def search():
     result = get_direct_answer(query, text)
     logger.debug(f"Suchergebnis: {result}")
     
-    return jsonify({
-        'query': query,
-        'results': {
+   return jsonify({
+    'query': query,
+    'results': {
+        # ... other dictionary elements ...
+    }, #<-- Add the closing brace here
+    'direct_answer': result.get('direct_answer'),
+    'matches': result.get('matches'),
+    'pattern_used': result.get('pattern_used')
+})
