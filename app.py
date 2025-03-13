@@ -106,6 +106,11 @@ def ask_anthropic():
         return jsonify({'response': message.content[0].text})
     except Exception as e:
         return jsonify({'error': f'Fehler bei der Anfrage an Anthropic: {str(e)}'}), 500
+    
+@app.route('/say_hello', methods=['GET'])
+def say_hello():
+    return jsonify({'text': 'hello world'}), 200
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
